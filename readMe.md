@@ -1,5 +1,5 @@
   ##JSez.js
-  ### version: 0.02 2018/01/03
+  ### version: 1.0.0 2018/01/03
   ####Author: Dave Bailey
   **Link: _http://creativeprosource.com_**
   
