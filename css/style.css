@@ -1,0 +1,19 @@
+form .required::after{
+    content:'*';
+    color:red;
+}
+form .input-wrapper {margin-bottom:10px;}
+form .invalid {
+    border-color: rgb(255,88,88);
+    background-color: rgb(255,227,223);
+}
+form .err-msg {
+    color:red;
+    font-size:11px;
+    width:99%;
+    height:14px;
+    text-align:right;
+}
+form .err-msg:first-letter {
+    text-transform:capitalize;
+}

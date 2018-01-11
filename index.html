@@ -1,0 +1,70 @@
+<!DOCTYPE HTML> <!-- HTML5 -->
+<!--[if IE 8]>
+<html class="ie8"> <![endif]-->
+<!--[if gte IE 9]>
+<html class="ie"> <![endif]-->
+<!--[if !IE]><!-->
+<html>          <!--<![endif]-->
+<head>
+    <title>JSez test page</title>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="JSez,javascript,"/>
+    <meta name="description" content="test page for JSez javascript library"/>
+    <meta name="Author" content="Dave Bailey, http://www.creativeprosource.com"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel='stylesheet' href='css/style.css'/>
+<body id="body">
+<div id="container">
+        <form action="./php/webService.php" method="POST" id="form" name="test">
+        <div id="name-wrapper">
+            <label for="name" class="required">Full Name</label><br>
+            <input id="name" validate="required" name="name" type="text"  validate="required"/>
+            <div class="err-msg"></div>
+        </div>
+        <div id="CheckboxGroup-wrapper">
+            <label class="required">Select 2 or more</label><br>
+            <label for="CheckboxGroup_1">Checkbox 1</label>
+            <input type="checkbox" name="CheckboxGroup" checked value="1" id="CheckboxGroup_1" 
+                   validate="require-2"><br>
+            <label for="CheckboxGroup_2">Checkbox 2</label>
+            <input type="checkbox" name="CheckboxGroup" checked value="2" id="CheckboxGroup_2" 
+                   validate="require-2"><br>
+            <label for="CheckboxGroup_3">Checkbox 3</label>
+            <input type="checkbox" name="CheckboxGroup" checked value="3" id="CheckboxGroup_3" 
+                   validate="require-2"><br>
+            <label for="CheckboxGroup_4">Checkbox 4</label>
+            <input type="checkbox" name="CheckboxGroup" checked value="4" id="CheckboxGroup_4" 
+                   validate="require-2"><br>
+            <div class="err-msg"></div>
+        </div>
+        <div id="radio-wrapper">
+            <label class="required">Select 1</label><br>
+            <label for="radio_1">Radio 1</label>
+            <input name="radio" type="radio" value="one" id="radio_1"  validate="require-1"><br>
+            <label for="radio_2">Radio 2</label>
+            <input name="radio" type="radio" value="two" id="radio_2"  validate="require-1">
+            <div class="err-msg"></div>
+        </div>
+        <div id="listmenu-wrapper">
+            <label for="listmenu" class="required">Select one or more</label><br>
+            <select id="listmenu" name="listmenu" size="20" multiple validate="required">
+                <option value="One">Option One</option>
+                <option value="Two">Option Two</option>
+                <option value="Three">Option Three</option>
+                <option value="Four">Option Four</option>
+            </select>
+            <div class="err-msg"></div>
+        </div>
+        <div id="comment-wrapper">
+            <label for="comment" class="required">Enter your comment</label><br>
+            <textarea id="comment" name="comment" validate="required"></textarea><br>
+            <div class="err-msg"></div>
+        </div>
+        <input name="button" type="button" value="Click Me" class="button" id="button"><br>
+        <input name="submit" type="submit" value="Submit" class="submit" id="submit">
+        <div><span class="required"></span> Required field</div>
+    </form>
+</div><!-- end container -->
+<script src='js/onload.js'></script>
+</body>
+</html>
