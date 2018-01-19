@@ -10,7 +10,7 @@
  
  To use JSez include the file in your document.
  ```HTML
- <script src='js/classes/JSez.js'></script>
+ <script src='jsez-min.js'></script>
  ```
 Below are examples of how to use JSez.
  ```javascript

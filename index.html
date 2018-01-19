@@ -14,8 +14,9 @@
     <meta name="viewport" content="width=device-width"/>
     <link rel='stylesheet' href='css/style.css'/>
 <body id="body">
-<div id="container">
-        <form action="./php/webService.php" method="POST" id="form" name="test">
+<div id="container"><!--action="./php/webService.php"-->
+        <form action="./php/webService.php" method="POST" id="form" name="TestSubmit">
+            <input name="id" type="hidden" value="0" id="id">
         <div id="name-wrapper">
             <label for="name" class="required">Full Name</label><br>
             <input id="name" validate="required" name="name" type="text"  validate="required"/>
@@ -60,11 +61,13 @@
             <textarea id="comment" name="comment" validate="required"></textarea><br>
             <div class="err-msg"></div>
         </div>
-        <input name="button" type="button" value="Click Me" class="button" id="button"><br>
-        <input name="submit" type="submit" value="Submit" class="submit" id="submit">
-        <div><span class="required"></span> Required field</div>
+            <input name="button" type="button" value="Click Me" class="button" id="button"><br>
+            <input name="submit" type="button" value="Submit Form" class="submitbutton" id="submit">
+        <div>
+            <span class="required"></span> Required field</div>
     </form>
 </div><!-- end container -->
+<script src='js/source/JSez.js'></script>
 <script src='js/onload.js'></script>
 </body>
 </html>

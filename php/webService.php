@@ -1,16 +1,9 @@
 <?php
     /**************************************************************************
      * webService.php created by Dave Bailey
-     * handles all ajax calls made with AJAXcall.js
+     * handles all ajax calls made with jsez.js
      * by calling a method in the named class with the supplied parameters
-     ************ EXAMPLE AJAX CALL ********************************************
-      import AJAXcall from './AJAXcall.js'
-      let ajaxcall = new AJAXcall('className','methodCalled',[parametersArray],[method],[async])
-      .then((data) => handleResolveFunction(data))
-      .catch((err) => console.log("ERROR: ", err));
      ***************************************************************************/
-    // require_once("../includes/authorize.php");
-
     if (!isset($_REQUEST['className']) && !isset($_REQUEST['methodCalled'])) {
         exit(json_encode(array(false, "Error webservice missing required parameters")));
     }
@@ -24,7 +17,7 @@
     }
 
     if (!class_exists($_REQUEST['className'])) {
-        $classPath = '../classes/' . $_REQUEST['className'] . '.php';
+        $classPath = './classes/' . $_REQUEST['className'] . '.php';
         try {
             if (!file_exists($classPath )) {
                 throw new Exception ($_REQUEST['className'].' class does not exist');
@@ -47,4 +40,5 @@
     }
     if (!$res) $res = array(false, "Web service failed");
     exit(json_encode($res));
+
 ?>
